@@ -19,6 +19,7 @@
         .bg-oxon-red { background-color: #CC0000; }
         .text-oxon-red { color: #CC0000; }
         .border-oxon-red { border-color: #CC0000; }
+        .hover-text-oxon-red:hover { color: #CC0000; }
         
         /* GITHUB REPO SETUP INSTRUCTION:
            1. Create an 'images' folder in your root directory.
@@ -49,8 +50,8 @@
                     <i data-lucide="hammer" class="text-white w-6 h-6"></i>
                 </div>
                 <div class="leading-tight">
-                    <span class="block font-extrabold text-xl tracking-tight">OXON & BUCKS</span>
-                    <span class="block text-oxon-red font-bold text-sm tracking-widest uppercase">Roofing Specialists</span>
+                    <!-- UPDATED: Name changed, "Specialists" removed -->
+                    <span class="block font-extrabold text-xl tracking-tight">OXON & BUCKS ROOFING</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-6">
@@ -76,7 +77,8 @@
                 </div>
                 <h1 class="hero-element opacity-0 translate-y-8 text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">Expert Roofing Repairs & Full Re-roofing Across Oxon & Bucks</h1>
                 <p class="hero-element opacity-0 translate-y-8 text-xl md:text-2xl mb-8 text-gray-200 drop-shadow-md">
-                    8-Man Professional Crew | <span class="text-white font-bold underline decoration-oxon-red">20-Year Guarantee</span> | Family-Run Business Since 2004.
+                    <!-- UPDATED: Year changed to 2006 -->
+                    8-Man Professional Crew | <span class="text-white font-bold underline decoration-oxon-red">20-Year Guarantee</span> | Family-Run Business Since 2006.
                 </p>
                 <div class="hero-element opacity-0 translate-y-8 flex flex-col sm:flex-row gap-4">
                     <a href="tel:07785329497" class="bg-oxon-red text-white text-center py-4 px-8 rounded-lg font-extrabold text-xl hover:bg-white hover:text-oxon-red transition-all flex items-center justify-center gap-3 shadow-2xl transform hover:scale-105 duration-200">
@@ -232,7 +234,6 @@
         <div class="container mx-auto px-4">
             <h3 class="text-xl font-extrabold mb-8 text-center text-gray-500 uppercase tracking-[0.3em]">Where We Work (30-Mile Radius from MK18)</h3>
             <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 area-tags">
-                <!-- MODIFIED: Changed 'transition' to 'transition-colors' to avoid conflict with GSAP opacity/transform -->
                 <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Oxford</span>
                 <span class="text-gray-300">•</span>
                 <span class="font-bold hover:text-oxon-red cursor-default text-oxon-red transition-colors">Milton Keynes</span>
@@ -338,14 +339,28 @@
                 <i data-lucide="hammer" class="text-oxon-red w-8 h-8"></i>
                 <span class="text-2xl font-black">OXON & BUCKS ROOFING</span>
             </div>
-            <p class="text-gray-500 mb-8 max-w-md mx-auto">Registered roofing specialists serving Oxfordshire, Buckinghamshire, and Northamptonshire since 2004.</p>
+            <p class="text-gray-500 mb-6 max-w-md mx-auto">
+                Registered roofing specialists serving Oxfordshire, Buckinghamshire, and Northamptonshire since 2006.
+            </p>
+            
             <div class="flex justify-center gap-6 mb-8 text-sm font-bold uppercase tracking-widest text-gray-400">
                 <a href="#services" class="hover:text-oxon-red transition">Services</a>
                 <a href="#about" class="hover:text-oxon-red transition">Why Us</a>
                 <a href="#areas" class="hover:text-oxon-red transition">Areas</a>
+                <!-- UPDATED: Facebook Icon -->
+                <a href="#" class="hover:text-oxon-red transition" aria-label="Facebook">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-gray-600 text-xs">
-                &copy; 2024 Oxon & Bucks Roofing. All Rights Reserved. Fully Insured Master Tradesmen.
+
+            <div class="border-t border-gray-800 pt-8 text-gray-600 text-xs flex flex-col gap-2">
+                <p>&copy; 2024 Oxon & Bucks Roofing. All Rights Reserved. Fully Insured Master Tradesmen.</p>
+                <!-- UPDATED: Roofflow AI Credit -->
+                <p>
+                    <a href="https://roofflowai.co.uk/" target="_blank" class="hover:text-oxon-red transition-colors font-semibold">
+                        Created by Roofflow AI
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
