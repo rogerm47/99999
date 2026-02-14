@@ -21,10 +21,6 @@
         .border-oxon-red { border-color: #CC0000; }
         .hover-text-oxon-red:hover { color: #CC0000; }
         
-        /* IMAGE INSTRUCTION:
-           Ensure you have renamed your hero image to match the SEO-friendly name below:
-           'oxon-bucks-roofing-8-man-crew-emergency-repairs-mk18.webp'
-        */
         .hero-gradient { 
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.75)), url('./oxon-bucks-roofing-8-man-crew-emergency-repairs-mk18.webp'); 
             background-size: cover; 
@@ -96,7 +92,6 @@
             <span class="flex items-center gap-2"><i data-lucide="users" class="text-oxon-red"></i> Family Run Business</span>
             <span class="flex items-center gap-2"><i data-lucide="shield-check" class="text-oxon-red"></i> 20-Year Guarantee</span>
             <span class="flex items-center gap-2"><i data-lucide="truck" class="text-oxon-red"></i> Rapid Response Team</span>
-            <span class="flex items-center gap-2"><i data-lucide="award" class="text-oxon-red"></i> Master Craftsmen</span>
         </div>
     </div>
 
@@ -284,11 +279,34 @@
                 <div class="md:w-2/3 p-10">
                     <form id="quoteForm" class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
-                            <input type="text" name="name" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Your Name">
-                            <input type="tel" name="phone" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Phone Number">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Your Name</label>
+                                <input type="text" name="name" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="John Smith">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Phone Number</label>
+                                <input type="tel" name="phone" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="07123 456789">
+                            </div>
                         </div>
-                        <input type="text" name="location" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Postcode / Location">
-                        <textarea name="description" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" rows="3" placeholder="Tell us about the project..."></textarea>
+                        <!-- RESTORED: Service selection field -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Service Required</label>
+                            <select name="service" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition bg-white">
+                                <option value="Full Re-roofing">Full Re-roofing</option>
+                                <option value="Emergency Repair">Emergency Repair</option>
+                                <option value="Guttering / Fascias">Guttering / Fascias</option>
+                                <option value="Chimney Work">Chimney Work</option>
+                                <option value="General Maintenance">General Maintenance</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Postcode / Location</label>
+                            <input type="text" name="location" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="e.g. MK18 1AB">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Brief Description</label>
+                            <textarea name="description" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" rows="3" placeholder="Tell us about the project..."></textarea>
+                        </div>
                         <button type="submit" class="w-full bg-black text-white font-black py-4 rounded-lg hover:bg-oxon-red transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-95 duration-200">
                             SEND QUOTE REQUEST <i data-lucide="send" class="w-5 h-5"></i>
                         </button>
