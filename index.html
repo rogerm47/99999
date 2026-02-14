@@ -19,25 +19,15 @@
         .bg-oxon-red { background-color: #CC0000; }
         .text-oxon-red { color: #CC0000; }
         .border-oxon-red { border-color: #CC0000; }
-        .hover-text-oxon-red:hover { color: #CC0000; }
         
-        /* GITHUB REPO SETUP INSTRUCTION:
-           1. Create an 'images' folder in your root directory.
-           2. Place your own high-quality 'hero-bg.jpg' there.
-           3. Change the url below to: url('./images/hero-bg.jpg')
-        */
         .hero-gradient { 
-            /* Currently using a high-end Unsplash slate roof texture to match "Pro" aesthetic */
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.75)), url('man_at_work_miltonkeynes.webp'); 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.75)), url('./oxon-bucks-roofing-8-man-crew-emergency-repairs-mk18.webp'); 
             background-size: cover; 
             background-position: center; 
-            background-attachment: fixed; /* Parallax effect for premium feel */
+            background-attachment: fixed;
         }
         
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -50,8 +40,7 @@
                     <i data-lucide="hammer" class="text-white w-6 h-6"></i>
                 </div>
                 <div class="leading-tight">
-                    <!-- UPDATED: Name changed, "Specialists" removed -->
-                    <span class="block font-extrabold text-xl tracking-tight">OXON & BUCKS ROOFING</span>
+                    <span class="block font-extrabold text-xl tracking-tight uppercase">OXON & BUCKS ROOFING</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-6">
@@ -75,9 +64,8 @@
                 <div class="hero-element opacity-0 translate-y-8">
                     <span class="inline-block bg-oxon-red px-4 py-1 rounded text-sm font-bold mb-4 animate-pulse uppercase tracking-wider">24/7 Emergency Response Across MK18 & Beyond</span>
                 </div>
-                <h1 class="hero-element opacity-0 translate-y-8 text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">Expert Roofing Repairs & Full Re-roofing Across Oxon & Bucks</h1>
+                <h1 class="hero-element opacity-0 translate-y-8 text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg text-balance">Expert Roofing Repairs & Full Re-roofing Across Oxon & Bucks</h1>
                 <p class="hero-element opacity-0 translate-y-8 text-xl md:text-2xl mb-8 text-gray-200 drop-shadow-md">
-                    <!-- UPDATED: Year changed to 2006 -->
                     8-Man Professional Crew | <span class="text-white font-bold underline decoration-oxon-red">20-Year Guarantee</span> | Family-Run Business Since 2006.
                 </p>
                 <div class="hero-element opacity-0 translate-y-8 flex flex-col sm:flex-row gap-4">
@@ -103,7 +91,6 @@
             <span class="flex items-center gap-2"><i data-lucide="users" class="text-oxon-red"></i> Family Run Business</span>
             <span class="flex items-center gap-2"><i data-lucide="shield-check" class="text-oxon-red"></i> 20-Year Guarantee</span>
             <span class="flex items-center gap-2"><i data-lucide="truck" class="text-oxon-red"></i> Rapid Response Team</span>
-            <span class="flex items-center gap-2"><i data-lucide="award" class="text-oxon-red"></i> Master Craftsmen</span>
         </div>
     </div>
 
@@ -122,7 +109,7 @@
                         <i data-lucide="zap" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">24h Emergency Repairs</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Storm damage, active leaks, or missing tiles? Our 8-man crew means we always have a team ready to roll. Immediate response, proper temporary or permanent fixes.</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Storm damage, active leaks, or missing tiles? Our 8-man crew means we always have a team ready to roll.</p>
                     <a href="tel:07785329497" class="text-oxon-red font-bold flex items-center gap-2 hover:underline">Emergency Call <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
 
@@ -132,7 +119,7 @@
                         <i data-lucide="home" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Full Re-roofing</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Specialists in Tile, Slate, and Flat roofing. We handle the scaffolding, materials, and labor from start to finish. Every new roof comes with a 20-year insurance-backed guarantee.</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Specialists in Tile, Slate, and Flat roofing. Every new roof comes with a 20-year insurance-backed guarantee.</p>
                     <a href="#quote" class="text-oxon-red font-bold flex items-center gap-2 hover:underline">Get a Free Survey <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
 
@@ -142,119 +129,53 @@
                         <i data-lucide="droplet" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Guttering & Chimneys</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Fascias, soffits, and guttering replacement. We also provide professional chimney repointing and leadwork to prevent damp from entering your property.</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Fascias, soffits, and guttering replacement. Professional chimney repointing and leadwork.</p>
                     <a href="#quote" class="text-oxon-red font-bold flex items-center gap-2 hover:underline">Request a Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Speed Advantage Section -->
-    <section id="about" class="py-20 bg-gray-900 text-white overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2 advantage-text opacity-0 -translate-x-12">
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6">The 8-Man Advantage</h2>
-                    <p class="text-xl text-gray-400 mb-8 leading-relaxed">Most local roofers are one or two-man teams. That means long lead times and slow progress. At Oxon & Bucks Roofing, our crew of 8 professionals means we can tackle larger projects faster and provide quotes within 24 hours.</p>
-                    
-                    <ul class="space-y-4 mb-10">
-                        <li class="flex items-start gap-3">
-                            <div class="mt-1 bg-oxon-red p-1 rounded-full"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
-                            <div>
-                                <h4 class="font-bold text-lg">Speed-To-Lead</h4>
-                                <p class="text-gray-400">Quotes provided within 24 hours of your inquiry.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="mt-1 bg-oxon-red p-1 rounded-full"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
-                            <div>
-                                <h4 class="font-bold text-lg">Higher Capacity</h4>
-                                <p class="text-gray-400">We can start your project weeks earlier than competitors.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="mt-1 bg-oxon-red p-1 rounded-full"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
-                            <div>
-                                <h4 class="font-bold text-lg">Unmatched Reliability</h4>
-                                <p class="text-gray-400">Being family-run means we care about our reputation in your street.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2 relative advantage-image opacity-0 translate-x-12">
-                    <div class="bg-oxon-red absolute -top-4 -left-4 w-full h-full rounded-2xl opacity-10"></div>
-                    <img src="buckingham_crew.webp" alt="Roofing Team" class="relative rounded-2xl shadow-2xl border-4 border-oxon-red hover:scale-[1.02] transition duration-500">
-                    <div class="absolute bottom-6 left-6 bg-white text-black p-6 rounded-xl shadow-xl">
-                        <div class="text-oxon-red font-black text-4xl leading-none">20+</div>
-                        <div class="text-xs font-bold uppercase tracking-widest mt-1">Years of Excellence</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Placeholder -->
+    <!-- Project Gallery -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold mb-2 uppercase tracking-tight italic">Our Recent Projects</h2>
                 <div class="h-1 bg-oxon-red w-24 mx-auto"></div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 gallery-grid">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 gallery-grid">
+                <!-- Row 1 -->
                 <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4 text-center z-10">
-                        <span class="text-white text-xs font-bold">New Clay Tiles Installation - Oxford</span>
-                    </div>
-                    <img src="emergency-roof-repair-milton-keynes-leaking-tiles.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Roofing work">
+                    <img src="./emergency-roof-repair-milton-keynes-leaking-tiles.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Emergency repair MK">
                 </div>
                 <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4 text-center z-10">
-                        <span class="text-white text-xs font-bold">felting and battening - Milton Keynes</span>
-                    </div>
-                    <img src="felting_and_battening.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Roofing work">
+                    <img src="./new-slate-roof-installation-oxford-residential.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="New roof Oxford">
                 </div>
                 <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4 text-center z-10">
-                        <span class="text-white text-xs font-bold">Full Scaffolding Setup - Aylesbury</span>
-                    </div>
-                    <img src="full_scaffolding_setup_oxford.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Roofing work">
+                    <img src="./professional-roofers-working-on-scaffold-buckingham.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Team Buckingham">
                 </div>
                 <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4 text-center z-10">
-                        <span class="text-white text-xs font-bold">Wet Verge Pointing - Buckingham</span>
-                    </div>
-                    <img src="Wet_Verge_Pointing_buckingham.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Roofing work">
+                    <img src="./guttering-and-fascias-replacement-bicester-uk.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Guttering Bicester">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Areas -->
-    <section id="areas" class="py-16 bg-white border-y border-gray-100">
-        <div class="container mx-auto px-4">
-            <h3 class="text-xl font-extrabold mb-8 text-center text-gray-500 uppercase tracking-[0.3em]">Where We Work (30-Mile Radius from MK18)</h3>
-            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 area-tags">
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Oxford</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default text-oxon-red transition-colors">Milton Keynes</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Buckingham</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Northampton</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Aylesbury</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Banbury</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Bicester</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Brackley</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Witney</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">High Wycombe</span>
-                <span class="text-gray-300">•</span>
-                <span class="font-bold hover:text-oxon-red cursor-default transition-colors">Thame</span>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
+                    <img src="./chimney-repointing-and-leadwork-aylesbury-bucks.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Chimney Aylesbury">
+                </div>
+                <!-- Row 2 (New Placeholders) -->
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
+                    <img src="./tile-roof-refurbishment-northamptonshire-specialists.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Refurbishment Northampton">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
+                    <img src="./high-quality-roofing-materials-20-year-guarantee-banbury.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Materials Banbury">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
+                    <img src="./expert-lead-flashing-repairs-witney-oxfordshire.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Leadwork Witney">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
+                    <img src="./safe-roofing-scaffolding-setup-high-wycombe.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Scaffolding High Wycombe">
+                </div>
+                <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative group opacity-0 scale-95">
+                    <img src="./pitched-roof-repointing-thame-oxon.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Repointing Thame">
+                </div>
             </div>
         </div>
     </section>
@@ -265,7 +186,7 @@
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row contact-card opacity-0 translate-y-12">
                 <div class="md:w-1/3 bg-oxon-red p-10 text-white">
                     <h2 class="text-3xl font-extrabold mb-6 italic">Get Your Quote Fast</h2>
-                    <p class="mb-8 opacity-90 text-sm">Fill in this form for non-emergency quotes (re-roofing, guttering, maintenance). We aim to respond within 24 hours.</p>
+                    <p class="mb-8 opacity-90 text-sm">Fill in this form for non-emergency quotes. We aim to respond within 24 hours.</p>
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
                             <i data-lucide="phone" class="w-6 h-6"></i>
@@ -278,14 +199,8 @@
                             <i data-lucide="mail" class="w-6 h-6"></i>
                             <div>
                                 <p class="text-xs uppercase font-bold opacity-70">E-mail address</p>
-                                <a href="mailto:office@oxonbucksroofing.co.uk" class="font-bold hover:underline">office@oxonbucksroofing.co.uk</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="map-pin" class="w-6 h-6"></i>
-                            <div>
-                                <p class="text-xs uppercase font-bold opacity-70">Base Location</p>
-                                <p class="font-bold">Buckingham, MK18</p>
+                                <!-- UPDATED: info@ email -->
+                                <a href="mailto:info@oxonbucksroofing.co.uk" class="font-bold hover:underline">info@oxonbucksroofing.co.uk</a>
                             </div>
                         </div>
                     </div>
@@ -293,39 +208,17 @@
                 <div class="md:w-2/3 p-10">
                     <form id="quoteForm" class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Your Name</label>
-                                <input type="text" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="John Smith">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Phone Number</label>
-                                <input type="tel" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="07123 456789">
-                            </div>
+                            <input type="text" name="name" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Your Name">
+                            <input type="tel" name="phone" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Phone Number">
                         </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Service Required</label>
-                            <select class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition">
-                                <option>Full Re-roofing</option>
-                                <option>Guttering / Fascias</option>
-                                <option>Minor Repair</option>
-                                <option>Chimney Work</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Postcode / Location</label>
-                            <input type="text" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="e.g. MK18 1AB">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Brief Description</label>
-                            <textarea class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" rows="3" placeholder="Tell us about the issue..."></textarea>
-                        </div>
+                        <input type="text" name="location" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Postcode / Location">
+                        <textarea name="description" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" rows="3" placeholder="Tell us about the project..."></textarea>
                         <button type="submit" class="w-full bg-black text-white font-black py-4 rounded-lg hover:bg-oxon-red transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-95 duration-200">
                             SEND QUOTE REQUEST <i data-lucide="send" class="w-5 h-5"></i>
                         </button>
                     </form>
                     <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 text-green-700 font-bold rounded-lg text-center">
-                        Thanks! We've received your request and will call you shortly.
+                        Thanks! Request received.
                     </div>
                 </div>
             </div>
@@ -337,184 +230,34 @@
         <div class="container mx-auto px-4 text-center">
             <div class="flex items-center justify-center gap-2 mb-6">
                 <i data-lucide="hammer" class="text-oxon-red w-8 h-8"></i>
-                <span class="text-2xl font-black">OXON & BUCKS ROOFING</span>
+                <span class="text-2xl font-black uppercase">OXON & BUCKS ROOFING</span>
             </div>
-            <p class="text-gray-500 mb-6 max-w-md mx-auto">
-                Registered roofing specialists serving Oxfordshire, Buckinghamshire, and Northamptonshire since 2006.
-            </p>
-            
-            <div class="flex justify-center gap-6 mb-8 text-sm font-bold uppercase tracking-widest text-gray-400">
-                <a href="#services" class="hover:text-oxon-red transition">Services</a>
-                <a href="#about" class="hover:text-oxon-red transition">Why Us</a>
-                <a href="#areas" class="hover:text-oxon-red transition">Areas</a>
-                <!-- UPDATED: Facebook Icon -->
-                <a href="#" class="hover:text-oxon-red transition" aria-label="Facebook">
-                    <i data-lucide="facebook" class="w-5 h-5"></i>
-                </a>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-oxon-red transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
             </div>
-
-            <div class="border-t border-gray-800 pt-8 text-gray-600 text-xs flex flex-col gap-2">
-                <p>&copy; 2024 Oxon & Bucks Roofing. All Rights Reserved. Fully Insured Master Tradesmen.</p>
-                <!-- UPDATED: Roofflow AI Credit -->
-                <p>
-                    <a href="https://roofflowai.co.uk/" target="_blank" class="hover:text-oxon-red transition-colors font-semibold">
-                        Created by Roofflow AI
-                    </a>
-                </p>
+            <div class="border-t border-gray-800 pt-8 text-gray-600 text-xs flex flex-col gap-3">
+                <p>&copy; 2024 Oxon & Bucks Roofing. Since 2006. Fully Insured.</p>
+                <p><a href="https://roofflowai.co.uk/" target="_blank" class="hover:text-oxon-red transition-colors font-bold tracking-wider">Created by Roofflow AI</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Fixed Mobile CTA -->
-    <div class="md:hidden fixed bottom-0 left-0 w-full bg-oxon-red p-4 flex gap-2 z-[100] shadow-[0_-4px_10px_rgba(0,0,0,0.3)]">
-        <a href="tel:07785329497" class="flex-1 bg-white text-oxon-red text-center font-black py-3 rounded flex items-center justify-center gap-2">
-            <i data-lucide="phone" class="w-5 h-5"></i> CALL NOW
-        </a>
-        <a href="#quote" class="flex-1 bg-black text-white text-center font-black py-3 rounded flex items-center justify-center gap-2">
-            <i data-lucide="mail" class="w-5 h-5"></i> FREE QUOTE
-        </a>
-    </div>
-
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
-
-        // Form submission simulation
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+            const heroTl = gsap.timeline();
+            heroTl.to(".hero-element", { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" });
+            gsap.from(".trust-bar-items > span", { scrollTrigger: { trigger: ".trust-bar-items", start: "top 95%" }, y: 20, opacity: 0, duration: 0.6, stagger: 0.1 });
+            gsap.to(".service-card", { scrollTrigger: { trigger: "#services", start: "top 75%" }, y: 0, opacity: 1, duration: 0.8, stagger: 0.2 });
+            gsap.to(".gallery-grid > div", { scrollTrigger: { trigger: ".gallery-grid", start: "top 85%" }, scale: 1, opacity: 1, duration: 0.6, stagger: 0.05, ease: "back.out(1.7)" });
+            gsap.to(".contact-card", { scrollTrigger: { trigger: "#quote", start: "top 80%" }, y: 0, opacity: 1, duration: 1 });
+        });
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             this.classList.add('hidden');
             document.getElementById('formSuccess').classList.remove('hidden');
         });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // GSAP Animations
-        document.addEventListener("DOMContentLoaded", (event) => {
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Hero Section Animation (Sequence)
-            const heroTl = gsap.timeline();
-            heroTl.to(".hero-element", {
-                y: 0,
-                opacity: 1,
-                duration: 0.8,
-                stagger: 0.2,
-                ease: "power3.out"
-            });
-
-            // Trust Bar items
-            gsap.from(".trust-bar-items > span", {
-                scrollTrigger: {
-                    trigger: ".trust-bar-items",
-                    start: "top 90%",
-                },
-                y: 20,
-                opacity: 0,
-                duration: 0.6,
-                stagger: 0.1,
-                delay: 0.5
-            });
-
-            // Services Section Header
-            gsap.to(".section-header", {
-                scrollTrigger: {
-                    trigger: ".section-header",
-                    start: "top 80%",
-                },
-                y: 0,
-                opacity: 1,
-                duration: 0.8,
-                ease: "power2.out"
-            });
-
-            // Services Cards (Staggered)
-            gsap.to(".service-card", {
-                scrollTrigger: {
-                    trigger: "#services",
-                    start: "top 70%",
-                },
-                y: 0,
-                opacity: 1,
-                duration: 0.8,
-                stagger: 0.2,
-                ease: "power3.out"
-            });
-
-            // Advantage Text
-            gsap.to(".advantage-text", {
-                scrollTrigger: {
-                    trigger: "#about",
-                    start: "top 70%",
-                },
-                x: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out"
-            });
-
-            // Advantage Image
-            gsap.to(".advantage-image", {
-                scrollTrigger: {
-                    trigger: "#about",
-                    start: "top 70%",
-                },
-                x: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out",
-                delay: 0.2
-            });
-
-            // Gallery Grid
-            gsap.to(".gallery-grid > div", {
-                scrollTrigger: {
-                    trigger: ".gallery-grid",
-                    start: "top 80%",
-                },
-                scale: 1,
-                opacity: 1,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: "back.out(1.7)"
-            });
-            
-            // Area Tags (Subtle ripple effect on load)
-            gsap.from(".area-tags > span", {
-                scrollTrigger: {
-                    trigger: ".area-tags",
-                    start: "top 90%",
-                },
-                y: 10,
-                opacity: 0,
-                duration: 0.5,
-                stagger: 0.05,
-                ease: "power1.out"
-            });
-
-            // Contact Card
-            gsap.to(".contact-card", {
-                scrollTrigger: {
-                    trigger: "#quote",
-                    start: "top 75%",
-                },
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out"
-            });
-        });
     </script>
 </body>
 </html>
-
-
-
-
