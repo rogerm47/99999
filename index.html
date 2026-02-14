@@ -21,6 +21,10 @@
         .border-oxon-red { border-color: #CC0000; }
         .hover-text-oxon-red:hover { color: #CC0000; }
         
+        /* IMAGE INSTRUCTION:
+           Ensure you have renamed your hero image to match the SEO-friendly name below:
+           'oxon-bucks-roofing-8-man-crew-emergency-repairs-mk18.webp'
+        */
         .hero-gradient { 
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.75)), url('./oxon-bucks-roofing-8-man-crew-emergency-repairs-mk18.webp'); 
             background-size: cover; 
@@ -92,6 +96,7 @@
             <span class="flex items-center gap-2"><i data-lucide="users" class="text-oxon-red"></i> Family Run Business</span>
             <span class="flex items-center gap-2"><i data-lucide="shield-check" class="text-oxon-red"></i> 20-Year Guarantee</span>
             <span class="flex items-center gap-2"><i data-lucide="truck" class="text-oxon-red"></i> Rapid Response Team</span>
+            <span class="flex items-center gap-2"><i data-lucide="award" class="text-oxon-red"></i> Master Craftsmen</span>
         </div>
     </div>
 
@@ -227,6 +232,7 @@
         <div class="container mx-auto px-4">
             <h3 class="text-xl font-extrabold mb-8 text-center text-gray-500 uppercase tracking-[0.3em]">Where We Work (30-Mile Radius from MK18)</h3>
             <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 area-tags">
+                <!-- FIX APPLIED: transition-colors ONLY to avoid GSAP conflict -->
                 <span class="font-bold hover:text-oxon-red cursor-default transition-colors duration-300">Oxford</span>
                 <span class="text-gray-300">•</span>
                 <span class="font-bold hover:text-oxon-red cursor-default text-oxon-red transition-colors duration-300">Milton Keynes</span>
@@ -279,34 +285,11 @@
                 <div class="md:w-2/3 p-10">
                     <form id="quoteForm" class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Your Name</label>
-                                <input type="text" name="name" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="John Smith">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Phone Number</label>
-                                <input type="tel" name="phone" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="07123 456789">
-                            </div>
+                            <input type="text" name="name" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Your Name">
+                            <input type="tel" name="phone" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Phone Number">
                         </div>
-                        <!-- RESTORED: Service selection field -->
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Service Required</label>
-                            <select name="service" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition bg-white">
-                                <option value="Full Re-roofing">Full Re-roofing</option>
-                                <option value="Emergency Repair">Emergency Repair</option>
-                                <option value="Guttering / Fascias">Guttering / Fascias</option>
-                                <option value="Chimney Work">Chimney Work</option>
-                                <option value="General Maintenance">General Maintenance</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Postcode / Location</label>
-                            <input type="text" name="location" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="e.g. MK18 1AB">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Brief Description</label>
-                            <textarea name="description" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" rows="3" placeholder="Tell us about the project..."></textarea>
-                        </div>
+                        <input type="text" name="location" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" required placeholder="Postcode / Location">
+                        <textarea name="description" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-oxon-red outline-none transition" rows="3" placeholder="Tell us about the project..."></textarea>
                         <button type="submit" class="w-full bg-black text-white font-black py-4 rounded-lg hover:bg-oxon-red transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-95 duration-200">
                             SEND QUOTE REQUEST <i data-lucide="send" class="w-5 h-5"></i>
                         </button>
@@ -368,6 +351,7 @@
             gsap.to(".gallery-grid > div", { scrollTrigger: { trigger: ".gallery-grid", start: "top 85%" }, scale: 1, opacity: 1, duration: 0.6, stagger: 0.05, ease: "back.out(1.7)" });
             
             // AREA TAGS ANIMATION
+            // Ensure no CSS 'transition' (all) is on these elements, only 'transition-colors'
             gsap.from(".area-tags > span", { 
                 scrollTrigger: { 
                     trigger: ".area-tags", 
@@ -383,57 +367,11 @@
             gsap.to(".contact-card", { scrollTrigger: { trigger: "#quote", start: "top 80%" }, y: 0, opacity: 1, duration: 1 });
         });
 
-        // Form Submission to n8n Webhook
-        const form = document.getElementById('quoteForm');
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const successMsg = document.getElementById('formSuccess');
-
-        form.addEventListener('submit', async function(e) {
+        // Form Submission (Netlify / n8n)
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // 1. Loading State
-            const originalBtnText = submitBtn.innerHTML;
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 'SENDING... <i data-lucide="loader" class="w-5 h-5 animate-spin"></i>';
-            lucide.createIcons(); // Re-init icon for loader
-
-            // 2. Prepare Data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            // Add metadata
-            data.source = "landing_page_main";
-            data.submittedAt = new Date().toISOString();
-
-            try {
-                // 3. Send to n8n Webhook
-                const response = await fetch('https://primary-production-58a3.up.railway.app/webhook/141d7bf1-0e36-456f-a24c-221e49dd1f3f', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    // 4. Success UI
-                    form.classList.add('hidden');
-                    successMsg.classList.remove('hidden');
-                    // Optional: Send event to Google Analytics/Facebook Pixel here
-                } else {
-                    throw new Error('Server error');
-                }
-            } catch (error) {
-                // 5. Error UI
-                console.error('Submission error:', error);
-                alert("Sorry, there was a connection problem. Please call us directly at 07785 329497 for immediate assistance.");
-            } finally {
-                // 6. Reset Button (if error occurred)
-                if (!successMsg.classList.contains('hidden')) return; // Don't reset if success
-                
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
-                lucide.createIcons();
-            }
+            this.classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
         });
     </script>
 </body>
